@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Institucional - IDW S.A</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="institucional.html">Información institucional</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <a href="contacto.html" class="boton">¡Reserva ahora!</a>
+        </nav>
+    </header>
+
+    <main class="principal">
+        <div class="texto-contacto">
+            <h2>¿Quiénes somos?</h2>
+            <p><strong>IDW S.A</strong> es un salón de fiestas dedicado a crear recuerdos inolvidables. Desde 2024, brindamos experiencias mágicas llenas de diversión, color y alegría.</p>
+
+            <h2>Nuestra misión</h2>
+            <p>Ofrecer un espacio seguro, creativo y completamente adaptado a las necesidades de todas las personas, para que vivan su día soñado rodeados de familia y amigos.</p>
+
+            <h2>Nuestra visión</h2>
+            <p>Ser el salón de fiestas preferido en la zona por nuestra innovación en propuestas temáticas y calidad en el servicio .</p>
+
+            <h2>Valores</h2>
+            <ul>
+                <li>Creatividad en cada celebración</li>
+                <li>Seguridad en todas nuestras instalaciones</li>
+                <li>Compromiso con las familias</li>
+                <li>Diversión garantizada</li>
+            </ul>
+        </div>
+
+        <div class="imagen-salon">
+            <img src="img/salon.jpg" alt="Imagen del salón">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Ubicación: Provincia de Buenos Aires</p>
+        <p>Contacto: 011 26558748</p>
+        <p>Email: info@IDW.com</p>
+        <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
