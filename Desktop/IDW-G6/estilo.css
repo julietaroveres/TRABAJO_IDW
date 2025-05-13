@@ -217,3 +217,101 @@ iframe {
     border: none;
     border-radius: 4px;
 }
+
+:root {
+  --color-principal: #399ca3;
+  --color-hover: #2d7e85;
+  --color-claro: #f4f4f4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-claro);
+}
+
+.navbar-custom {
+  background-color: var(--color-principal) ;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .navbar-brand:hover {
+  color: #e0f7fa;
+}
+
+.navbar-custom .btn-outline-light {
+  border-color: white;
+  color: white;
+}
+
+.navbar-custom .btn-outline-light:hover {
+  background-color: white;
+  color: var(--color-principal);
+}
+
+.hero-section {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-section img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.section-content {
+  padding: 60px 20px;
+}
+
+.section-content h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: var(--color-hover);
+}
+
+.footer-custom {
+  background-color: var(--color-principal);
+  text-align: center;
+  padding: 30px;
+  color: white;
+  margin-top: 60px;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.imagen-salon img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

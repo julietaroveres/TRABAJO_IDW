@@ -1,70 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDW S.A</title>
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDW S.A.</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css" />
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="institucional.html">Información institucional</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-            </ul>
 
-            <a href="institucional.html" class="boton">¡Reserva ahora!</a>
-          </nav>
 
-          <main>
-            <section class="bienvenida">
-              <img src="img/logo.png" class="logo-hero">
-              <h1>Bienvenidos a IDW S.A</h1>
-            </section>
-            <section class="principal">
-              <div class="texto-contacto">
-                <h2>Contactanos para reservar tu salón</h2>
-                <p>Viví una experiencia única</p>
-                
-               
-                <p>Explorá nuestros salones y servicios personalizados.</p>
-          
-                <p><strong>Nuestros salones son:</strong></p>
-                <ul>
-                  <li>Salon naranja</li>
-                  <li>Salon verde</li>
-                  <li>Salon rosa</li>
-                  <li>Salon para pequeños</li>
-                </ul>
-                <p><strong>Nuestros otros servicios</strong></p>
-                      <ul>
-                         <li>Servicios de catering</li>
-                         <li>Servicio de cotillon</li>
-                         <li>Servicio de candibar</li>
-                      </ul>
-                <div class="botones-acciones">
-                  <a href="contacto.html" class="boton">¡Hacé tu presupuesto ahora!</a>
-                  <a href="institucional.html" class="boton">Conocé nuestra historia</a>
-                </div>
-              </div>
-          
-              <div class="imagen-salon">
-                <img src="img/ej_salon.jpg" alt="Salón de eventos">
-              </div>
-            
-            
-          </main>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="bi bi-balloon-heart-fill me-2"></i>IDW S.A.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Información institucional</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0" href="#">¡Reserva ahora!</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-          <footer class="footer">
-            <p>Ubicación: .... Provincia de Buenos Aires</p>
-            
-            <p>Contacto: 011 26558748</p>
-            
-            <p>Email: info@IDW.com</p>
-            <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
-          </footer>
-    </header>
+  <section class="hero-section">
+    <div class="container text-center">
+      <img src="img/logo.png" alt="Logo de IDW" />
+      <h1>Bienvenidos a IDW S.A.</h1>
+      <p class="lead">Viví una experiencia única para tus eventos más importantes.</p>
+    </div>
+  </section>
+
+  <section class="section-content container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2>Contactanos para reservar tu salón</h2>
+        <p>Explorá nuestros salones y servicios personalizados.</p>
+        <p><strong>Nuestros salones son:</strong></p>
+        <ul>
+          <li>Salón naranja</li>
+          <li>Salón verde</li>
+          <li>Salón rosa</li>
+          <li>Salón para pequeños</li>
+        </ul>
+        <p><strong>Nuestros otros servicios:</strong></p>
+        <ul>
+          <li>Servicios de catering</li>
+          <li>Servicio de cotillón</li>
+          <li>Servicio de candy bar</li>
+        </ul>
+        <div class="mt-4">
+          <a href="#" class="boton">¡Hacé tu presupuesto ahora!</a>
+          <a href="#" class="boton">Conocé nuestra historia</a>
+        </div>
+      </div>
+      <div class="col-lg-6 imagen-salon">
+        <img src="img/ej_salon.jpg" alt="Salón de eventos" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-custom">
+    <p><strong>Ubicación:</strong> Provincia de Buenos Aires</p>
+    <p><strong>Contacto:</strong> 011 26558748</p>
+    <p><strong>Email:</strong> info@IDW.com</p>
+    <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
