@@ -12,25 +12,19 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <i class="bi bi-balloon-heart-fill me-2"></i>IDW S.A.
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-balloon-heart-fill me-2"></i>IDW S.A.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="institucional.html">Información institucional</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="institucional.html">Información institucional</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="contacto.html">Contacto</a>
+            <a class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0" href="catalogo.html">¡Reserva ahora!</a>
           </li>
         </ul>
       </div>
@@ -79,11 +73,28 @@
     </iframe>
   </section>
 
-  <footer class="footer text-center bg-dark text-white py-4">
-    <p>Ubicación: Provincia de Buenos Aires</p>
-    <p>Contacto: 011 26558748</p>
-    <p>Email: info@IDW.com</p>
-    <p>&copy; 2025 IDW S.A - Todos los derechos reservados</p>
+  <footer class="footer border-top py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Columna 1: Nombre y enlaces -->
+        <div class="col-md-6 mb-3 mb-md-0 text-center text-md-start">
+          <h3 class="mb-3">idwsalones.com</h3>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <a href="institucional.html" class="btn btn-link p-0">Institucional</a>
+            <a href="index.html" class="btn btn-link p-0">Nosotros</a>
+            <a href="contacto.html" class="btn btn-link p-0">Contacto</a>
+          </div>
+        </div>
+  
+        <!-- Columna 2: Datos de contacto -->
+        <div class="col-md-6 text-md-start text-center">
+          <p class="mb-1">Ubicación: Provincia de Buenos Aires</p>
+          <p class="mb-1">Contacto: 011 26558748</p>
+          <p class="mb-1">Email: info@IDW.com</p>
+          <p class="mb-0">&copy; 2025 IDW S.A - Todos los derechos reservados</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
