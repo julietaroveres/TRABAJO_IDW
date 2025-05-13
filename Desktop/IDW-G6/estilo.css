@@ -2,184 +2,168 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Estilo general del cuerpo */
-  body {
-    font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
     background-color: #d0ecea;
     color: #333;
     line-height: 1.6;
-  }
-  
-  /* NAV */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+/* NAVBAR */
+.navbar {
     background-color: #429688;
-    padding: 15px 30px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  nav ul li a {
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: #374599;
-  }
-  
-  nav::before {
-    content: '';
-    background-image: url('img/logo.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 120px;
-    height: 40px;
-    display: block;
-    margin-right: 20px;
-  }
-  
-  /* SECCIÓN BIENVENIDA */
-  .bienvenida {
-    background-image: url('img/salon.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    padding: 20px;
-  }
-  
-  .logo-hero {
-    width: 200px;
-    max-width: 80%;
-    margin-bottom: 20px;
-  }
-  
-  .bienvenida h1 {
-    font-size: 4rem;
-    color: #ffffff;
-  }
-  
-  /* BOTONES */
-  a.boton {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin: 10px 0;
-    border-radius: 4px;
-  }
-  
-  a.boton:hover {
-    background-color: #0056b3;
-  }
-  
-  /* SECCIÓN CONTACTO */
-  .contacto-reserva, .principal {
+}
+
+.navbar .nav-link:hover {
+    color: #e0e0e0;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+/* SECCIÓN CONTACTO */
+.contacto-reserva, .principal {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 60px 40px;
     background-color: #f2f2f2;
-    flex-wrap: wrap;
     gap: 30px;
-  }
-  
-  .texto-contacto {
-    flex: 0 0 50%;
-    min-width: 280px;
+    flex-wrap: wrap;
+}
+
+.texto-contacto {
+    flex: 1 0 50%;
     margin-top: 40px;
     margin-left: 30px;
-  }
-  
-  .texto-contacto h2 {
+}
+
+.texto-contacto h2 {
     font-size: 2.5rem;
     color: #399ca3;
     margin-bottom: 10px;
-  }
-  
-  .texto-contacto p {
+}
+
+.texto-contacto p {
     font-size: 1.5rem;
     color: #666;
     margin-bottom: 20px;
-  }
-  
-  .texto-contacto ul {
+}
+
+.texto-contacto ul {
     font-size: 1.5rem;
     color: #333;
     list-style-type: disc;
     margin-left: 20px;
-  }
-  
-  /* IMAGEN */
-  .imagen-salon {
+}
+
+/* IMAGEN */
+.imagen-salon {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     min-width: 280px;
-  }
-  
-  .imagen-salon img {
+}
+
+.imagen-salon img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-  }
-  
-  /* ENCABEZADOS */
-  h1, h2, h3 {
+}
+
+/* Botones */
+.btn-reserva {
+    background-color: white;
+    color: #429688;
+    border: 2px solid #429688;
+    border-radius: 20px;
+    padding: 8px 16px;
     font-weight: bold;
-    color: #333;
-  }
-  
-  /* ENLACES */
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .botones-acciones {
-    display: flex;
-    gap: 20px; 
-    margin-top: 30px;
-    flex-wrap: wrap; 
-  }
-  
-  .botones-acciones .boton {
-    background-color: #399ca3;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-reserva:hover {
+    background-color: #007bff;
     color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  footer {
+    border-color: #007bff;
+}
+
+/* Estilos para la sección de valores */
+.valores-seccion {
+    background-color: #399ca3; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.valores-seccion h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
     text-align: center;
-    padding: 40px 20px;
+}
+
+.valores-lista {
+    list-style-type: none;  
+    padding-left: 10px;        
+    margin-top: 20px;
+}
+
+.valores-lista li {
+    font-size: 1.2rem;
+    color: #fcfbfb;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    text-align: left; /* <-- Cambiado a alineación izquierda */
+    margin-left: 0;
+    padding-left: 0;  /* Asegúrate de que no haya espacio innecesario */
+}
+
+
+.valores-seccion .col-md-8 {
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    text-align:left;
+    margin-left: 0;
+    
+}
+.btn-reserva {
+    background-color: white;
+    color: #429688;
+    border: 2px solid #429688;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-reserva:hover {
+    background-color: #007bff; /* azul al pasar el mouse */
+    color: white;
+    border-color: #007bff;
+}
+
+/* PIE DE PÁGINA */
+.footer {
     background-color: #429688;
     color: white;
-    font-size: 1rem;
-    line-height: 1.8;
-  }
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
