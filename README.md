@@ -5,3 +5,8 @@ Roveres Julieta
 Figueroa Sofia
 Castro Evelin
 Celeste Guerrero
+
+Contraseñas login
+user: admin1 ; pass: 1234
+user: admin2 ; pass: 5678
+user: admin3 ; pass: abcd
