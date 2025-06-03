@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin de Servicios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IDW S.A.</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+              <li class="nav-item"><a class="nav-link" href="adminsalones.html">Administrar salones</a></li>
+              <li class="nav-item"><a class="nav-link active" href="adminservicios.html">Administrar servicios</a></li>
+            </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h1 class="mb-4 text-center">Gestión de Servicios</h1>
+
+    <form id="formServicio" class="mb-4">
+      <input type="hidden" id="servicioId" />
+
+      <div class="mb-3">
+        <label for="nombreServicio" class="form-label">Nombre del Servicio</label>
+        <input type="text" id="nombreServicio" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="descripcionServicio" class="form-label">Descripción</label>
+        <textarea id="descripcionServicio" class="form-control" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="precioServicio" class="form-label">Precio ($)</label>
+        <input type="number" id="precioServicio" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="imagenServicio" class="form-label">URL de la Imagen</label>
+        <input type="url" id="imagenServicio" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-dark">Guardar Servicio</button>
+    </form>
+
+    <div id="detalleServicio" class="card p-3 mb-4" style="display: none;">
+      <h3 id="detalleNombreServicio"></h3>
+      <p><strong>Descripción:</strong> <span id="detalleDescripcionServicio"></span></p>
+      <p><strong>Precio:</strong> $ <span id="detallePrecioServicio"></span></p>
+      <img id="detalleImagenServicio" src="" alt="Imagen del servicio" style="max-width: 300px;" />
+      <button onclick="cerrarDetalleServicio()" class="btn btn-secondary mt-3">Cerrar</button>
+    </div>
+
+    <table class="table table-bordered" id="tablaServicios">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <footer class="footer py-5">
+    <div class="container text-center">
+      <p>&copy; 2025 IDW S.A. - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="adminservicios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
