@@ -1,0 +1,129 @@
+:root {
+    --color-fondo: #f8f4ee;
+    --color-acento: #B59F7B;
+    --color-texto: #333;
+  }
+  
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+  }
+  
+
+  .navbar {
+    background-color: #fff;
+  }
+  
+  .navbar-brand {
+    color: #333;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333;
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: 600;
+  }
+  
+  .btn-reserva {
+    background-color: #6C584C;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-reserva:hover {
+    background-color: #B59F7B;
+  }
+  
+
+  .valores-lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .valores-lista li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .valores-lista i {
+    color: var(--color-acento);
+    margin-right: 10px;
+  }
+  
+
+  .footer-link {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: var(--color-acento);
+
+  }
+  
+
+  .blockquote-footer {
+    color: #6C584C;
+    font-weight: 600;
+  }
+  
+
+  .servicios-seccion {
+    background-color: #e8dfcf;
+    padding: 5rem 0;
+  }
+  
+  .testimonios-seccion {
+    background-color: #d5ccba;
+    padding: 5rem 0;
+  }
+  
+  .nuestro-equipo-seccion {
+    background-color: #c3b8a6;
+    padding: 5rem 0;
+  }
+  
+
+  .equipo-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+
+  .seccion-titulo {
+    color: #333;
+  }
+
+.footer {
+    background-color: #6C584C;
+    color: #fff;
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: #B59F7B;
+  }
+  
+
+  .card .btn-outline-secondary {
+    border-color: #6C584C;
+    color: #6C584C;
+  }
+  
+  .card .btn-outline-secondary:hover {
+    background-color: #6C584C;
+    color: #fff;
+    border-color: #6C584C;
+  }
+  
