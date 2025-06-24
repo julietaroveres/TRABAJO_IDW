@@ -39,8 +39,21 @@
     <div class="d-grid gap-3">
       <a href="adminsalones.html" class="btn btn-login">Administrar Salones</a>
       <a href="adminservicios.html" class="btn btn-login">Administrar Servicios</a>
+      <button onclick="cerrarSesion()" class="btn btn-danger mt-3">Cerrar sesión</button>
     </div>
   </div>
+
+<script src="auth.js"></script>
+<script>
+  verificarAutenticacion();
+
+  function cerrarSesion() {
+    sessionStorage.removeItem("token");
+    window.location.href = "login.html";
+  }
+</script>
+
+
 
 </body>
 </html>
