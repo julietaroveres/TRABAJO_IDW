@@ -13,7 +13,7 @@ function login() {
   const valid = admins.find(admin => admin.user === user && admin.pass === pass);
 
   if (valid) {
-    localStorage.setItem("adminLogged", "true");
+    sessionStorage.setItem("token", "logueado"); 
     window.location.href = "menuadmin.html";
   } else {
     errorDiv.textContent = "Usuario o contraseña incorrectos.";
