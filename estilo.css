@@ -1,0 +1,257 @@
+
+:root {
+  --color-fondo: #f8f4ee;
+  --color-acento: #B59F7B;
+  --color-texto: #333;
+  --color-primario: #6C584C;
+  --color-footer: #6C584C;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--color-texto);
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: var(--color-texto);
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+}
+
+
+.btn-reserva,
+.btn-login {
+  background-color: var(--color-primario);
+  color: #fff;
+  border: none;
+}
+
+.btn-reserva:hover,
+.btn-login:hover {
+  background-color: var(--color-acento);
+}
+
+.btn-secondary-custom {
+  background-color: #d5ccba;
+  color: #333;
+}
+
+.btn-secondary-custom:hover {
+  background-color: #c3b8a6;
+  color: #fff;
+}
+
+
+.valores-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.valores-lista li {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.valores-lista i {
+  color: var(--color-acento);
+  margin-right: 10px;
+}
+
+.contact-info-icon {
+  font-size: 1.5rem;
+  color: var(--color-primario);
+}
+
+
+.footer {
+  background-color: var(--color-footer);
+  color: #fff;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--color-acento);
+}
+
+
+.servicios-seccion {
+  background-color: #e8dfcf;
+  padding: 5rem 0;
+}
+
+.testimonios-seccion {
+  background-color: #d5ccba;
+  padding: 5rem 0;
+}
+
+.nuestro-equipo-seccion {
+  background-color: #c3b8a6;
+  padding: 5rem 0;
+}
+
+.equipo-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+.blockquote-footer {
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+.seccion-titulo {
+  color: var(--color-texto);
+}
+
+
+.badge-popular {
+  background-color: var(--color-acento);
+  font-size: 0.8rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  padding: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: -60px;
+}
+
+.carousel-control-next {
+  right: -60px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-primario);
+  background-size: 60% 60%;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-image: none;
+  position: relative;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel-control-next-icon::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+body.login-body {
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.btn-reserva {
+  background-color: #6C584C;
+  color: #fff;
+  border: none;
+}
+
+.btn-reserva:hover {
+  background-color: #B59F7B;
+}
+
+.btn-secondary-custom {
+  background-color: #d5ccba;
+  color: #333;
+}
+
+.btn-secondary-custom:hover {
+  background-color: #c3b8a6;
+  color: #fff;
+}
+
+header {
+  background-color: var(--color-fondo);
+}
+
+.footer {
+  background-color: #6C584C;
+  color: #fff;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #B59F7B;
+}
+
+.testimonial-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.testimonial-card blockquote {
+  font-style: italic;
+}
+
+.testimonial-card-footer {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card,
+.testimonial-card {
+  height: 100%;
+}

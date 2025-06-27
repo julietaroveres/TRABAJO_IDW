@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin de Salones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://kit.fontawesome.com/4314b301f2.js" crossorigin="anonymous"></script>
+  
+  </head>
+<body>
+<script>
+    if (!sessionStorage.getItem("accessToken")) {
+        window.location.href = "login.html";
+    }
+</script>
+   <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IDW S.A.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link active" href="adminsalones.html">Administrar salones</a></li>
+          <li class="nav-item"><a class="nav-link" href="adminservicios.html">Administrar servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="adminusuarios.html">Administrar usuarios</a></li>
+          <li class="nav-item"><button class="btn btn-danger btn-sm ms-2" id="cerrarSesion">Cerrar sesión</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <div class="container my-5">
+  <h1 class="mb-4 text-center">Gestión de Salones</h1>
+
+  <form id="formSalon" class="mb-4">
+    <input type="hidden" id="salonId" />
+    <div class="mb-3">
+      <label for="nombreSalon" class="form-label">Nombre</label>
+      <input type="text" id="nombreSalon" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label for="capacidadSalon" class="form-label">Capacidad</label>
+      <input type="number" id="capacidadSalon" class="form-control" required />
+    </div>
+    <div class="mb-3">
+      <label for="direccionSalon" class="form-label">Dirección</label>
+      <input type="text" id="direccionSalon" class="form-control" required />
+      </div>
+    <div class="mb-3">
+      <label for="imagenSalon" class="form-label">Url de la Imagen</label>
+      <input type="url" id="imagenSalon" class="form-control" required />
+      <td><img src="${salon.imagen}" width="100"/></td>
+    </div>
+    <button style="background-color: #333; color: white;">Guardar</button>
+
+    
+  </form>
+  <div id="detalleSalon" style="display:none" class="card mt-4 p-3">
+  <h2 id="detalleNombre"></h2>
+  <p><strong>Capacidad:</strong> <span id="detalleCapacidad"></span></p>
+  <p><strong>Dirección:</strong> <span id="detalleDireccion"></span></p>
+  <img id="detalleImagen" src="" alt="Imagen del salón" style="max-width: 300px;">
+  <button onclick="cerrarDetalle()" class="btn btn-secondary mt-3">Cerrar</button>
+  </div>
+  <table class="table table-bordered" id="tabladeSalones">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Capacidad</th>
+        <th>Dirección</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+ 
+  <footer class="footer py-5">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>IDW S.A.</h4>
+          <p class="mb-2">Provincia de Buenos Aires</p>
+          <p class="mb-2">011 2655-8748</p>
+          <p>info@idw.com</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="d-flex flex-column align-items-md-end gap-2">
+            <a href="index.html" class="footer-link">Inicio</a>
+            <a href="institucional.html" class="footer-link">Información institucional</a>
+            <a href="contacto.html" class="footer-link">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <p class="text-center mb-0">&copy; 2025 IDW S.A. - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+<script src="auth.js"></script>
+<script>verificarAutenticacion();</script>
+
+<script src="admisalones.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+

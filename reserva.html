@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IDW S.A. - Reservá tu salón de fiestas de manera fácil y segura." />
+  <title>IDW S.A. | Confirmar Reserva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/4314b301f2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="estilo.css" />
+  <link rel="icon" type="image/png" href="img/logo-idw.png" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .btn-reserva {
+      background-color: #6C584C;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-reserva:hover {
+      background-color: #B59F7B;
+    }
+
+    .btn-secondary-custom {
+      background-color: #d5ccba;
+      color: #333;
+    }
+
+    .btn-secondary-custom:hover {
+      background-color: #c3b8a6;
+      color: #fff;
+    }
+
+    .container-form {
+      max-width: 600px;
+      margin: 50px auto;
+    }
+
+    #total {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #6C584C;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IDW S.A.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Inicia sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-form">
+    <h1 class="text-center fw-bold mb-4">Confirmar Reserva</h1>
+
+    <form id="formReserva">
+      <div class="mb-3">
+        <label for="salon" class="form-label">Elegí tu salón</label>
+        <select class="form-select" id="salon">
+          <option value="15000">Salón Arcoíris (capacidad 60) - $15000</option>
+          <option value="18000">Castillo de Sueños (capacidad 50) - $18000</option>
+          <option value="13000">Fiesta Express (capacidad 70) - $13000</option>
+          <option value="16000">Colores (capacidad 80) - $16000</option>
+          <option value="17000">Aventura Park (capacidad 60) - $17000</option>
+          <option value="16500">Pequeños Héroes (capacidad 50) - $16500</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="fecha" class="form-label">Elegí la fecha</label>
+        <input type="date" class="form-control" id="fecha">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Servicios adicionales</label>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="decoracion" value="5000"><label class="form-check-label" for="decoracion">Decoración personalizada ($5000)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="animadores" value="4000"><label class="form-check-label" for="animadores">Animadores ($4000)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="torta" value="3500"><label class="form-check-label" for="torta">Torta temática ($3500)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="musica" value="3800"><label class="form-check-label" for="musica">Música-DJ ($3800)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="foto" value="5500"><label class="form-check-label" for="foto">Fotografía Profesional ($5500)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="catering" value="6000"><label class="form-check-label" for="catering">Catering ($6000)</label></div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Método de pago</label>
+        <select class="form-select" id="metodoPago" onchange="toggleTarjeta()">
+          <option value="efectivo">Efectivo</option>
+          <option value="tarjeta">Tarjeta</option>
+        </select>
+      </div>
+
+      <div class="mb-3" id="datosTarjeta" style="display: none;">
+        <label for="tarjeta" class="form-label">Número de tarjeta</label>
+        <input type="text" class="form-control" id="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX">
+      </div>
+
+      <div class="mb-4">
+        <h5>Presupuesto total: <span id="total">$0</span></h5>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label">Tu nombre:</label>
+        <input type="text" class="form-control mb-2" id="nombre" placeholder="Nombre completo">
+        <label class="form-label">Email:</label>
+        <input type="email" class="form-control mb-2" id="email" placeholder="correo@ejemplo.com">
+        <label class="form-label">Confirmá tu email:</label>
+        <input type="email" class="form-control mb-2" id="confirmEmail" placeholder="correo@ejemplo.com">
+        <label class="form-label">Teléfono:</label>
+        <input type="tel" class="form-control mb-2" id="telefono" placeholder="Ej: 1123456789">
+      </div>
+
+      <div id="resumenReserva" class="alert alert-light d-none mt-3"></div>
+
+      <div class="mb-3 text-center">
+        <button type="button" class="btn btn-reserva px-4" onclick="confirmarReserva()">Confirmar reserva</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #6C584C;">
+          <h5 class="modal-title text-white" id="modalConfirmacionLabel">¡Reserva confirmada!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p id="mensajeModal">Tu reserva ha sido realizada con éxito. ¡Gracias por confiar en IDW S.A.!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary-custom" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const salon = document.getElementById("salon");
+    const totalSpan = document.getElementById("total");
+    const servicioIds = ["decoracion", "animadores", "torta", "musica", "foto", "catering"];
+
+    function calcularTotal() {
+      let total = parseInt(salon.value);
+      servicioIds.forEach(id => {
+        const checkbox = document.getElementById(id);
+        if (checkbox && checkbox.checked) {
+          total += parseInt(checkbox.value);
+        }
+      });
+      totalSpan.textContent = "$" + total;
+    }
+
+    function toggleTarjeta() {
+      const metodo = document.getElementById("metodoPago").value;
+      document.getElementById("datosTarjeta").style.display = metodo === "tarjeta" ? "block" : "none";
+    }
+
+    function mostrarResumen() {
+      let servicios = servicioIds
+        .filter(id => document.getElementById(id).checked)
+        .map(id => document.querySelector(`label[for="${id}"]`).innerText)
+        .join(", ") || "Ninguno";
+
+      const salonText = salon.options[salon.selectedIndex].text;
+      const fecha = document.getElementById("fecha").value;
+
+      const resumen = `
+        <strong>Salón:</strong> ${salonText}<br>
+        <strong>Fecha:</strong> ${fecha}<br>
+        <strong>Servicios:</strong> ${servicios}<br>
+        <strong>Total:</strong> ${totalSpan.textContent}
+      `;
+
+      const resumenDiv = document.getElementById("resumenReserva");
+      resumenDiv.innerHTML = resumen;
+      resumenDiv.classList.remove("d-none");
+
+      document.getElementById("mensajeModal").innerHTML = `Tu reserva ha sido realizada con éxito.<br><br>${resumen}<br><br>¡Gracias por confiar en IDW S.A.!`;
+    }
+
+    function confirmarReserva() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const confirmEmail = document.getElementById("confirmEmail").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+      const fecha = document.getElementById("fecha").value.trim();
+      const metodo = document.getElementById("metodoPago").value;
+
+      if (!nombre || !email || !confirmEmail || !telefono || !fecha) {
+        alert("Por favor completá todos los campos obligatorios.");
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Ingresá un email válido.");
+        return;
+      }
+
+      if (email !== confirmEmail) {
+        alert("Los emails no coinciden.");
+        return;
+      }
+
+      if (metodo === "tarjeta") {
+        const tarjeta = document.getElementById("tarjeta").value.trim();
+        const tarjetaRegex = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+        if (!tarjetaRegex.test(tarjeta)) {
+          alert("Ingresá un número de tarjeta válido (formato XXXX-XXXX-XXXX-XXXX).");
+          return;
+        }
+      }
+
+      mostrarResumen();
+      const modal = new bootstrap.Modal(document.getElementById('modalConfirmacion'));
+      modal.show();
+    }
+
+    window.onload = () => {
+      const fechaInput = document.getElementById("fecha");
+      const today = new Date().toISOString().split("T")[0];
+      fechaInput.setAttribute("min", today);
+      calcularTotal();
+    };
+
+    salon.addEventListener("change", calcularTotal);
+    servicioIds.forEach(id => {
+      document.getElementById(id).addEventListener("change", calcularTotal);
+    });
+  </script>
+</body>
+
+</html>
+
